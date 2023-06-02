@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo challenge</title>
+</head>
+<body>
+    <a href="/add-new">Add an article</a>
+
+    <div class="user-list">
+        <% for (let i=0; i<users.length; i++) {%>
+            <div class="user-list-container">
+                <div class="text">
+                <h3 class="name-date"><span>Title: <%= users[i].title %></span></h3>
+                <p class="user-post">Text: <%= users[i].text.slice(0, 30) %></p>
+                <p>Added at: <%= users[i].create_at %></p>
+                <a href="/fullArticle/<%=users[i]._id %>">See More...</a>
+
+                </div>
+            </div>
+        <%}%>
+    </div>
+
+</body>
+</html>
